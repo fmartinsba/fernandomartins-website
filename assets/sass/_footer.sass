@@ -1,0 +1,28 @@
+footer
+  background:
+    position: 30px 45px, 50% 50%
+    image: url(../images/logo.svg), url(../images/Sydney-Harbour-Bridge-Sunset-Timelapse.jpg)
+
+  .lockup
+    padding: 50px 30px
+    +clearfix
+
+    .content-wrap
+      float: left
+      margin-left: 80px
+
+      .copyright
+        margin: 0
+        text-transform: uppercase
+        color: rgba(255,255,255,0.4)
+        font:
+          size: 12px
+
+      a
+        @extend %small-bold
+        color: rgba(255,255,255,0.5)
+        display: inline-block
+        margin-right: 30px
+
+        &:hover
+          color: rgba(255,255,255,7)

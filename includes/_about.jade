@@ -1,0 +1,32 @@
+include /includes/_config
+
+section#about
+
+  h3 About Myself
+  
+  .face-lockup
+    .face-img
+    .icon-pencil
+      a(href="#", target="_blank")
+        img(src="assets/images/file-pdf.png", alt="")
+    .icon-mouse
+      a(href="https://www.linkedin.com/in/fernando-martins-67592547", target="_blank")
+        img(src="assets/images/linkedin2.png", alt="")
+    .icon-browser
+      a(href="https://codepen.io/fmartinsba", target="_blank")
+        img(src="assets/images/codepen.png", alt="")
+    .icon-video
+      a(href="https://github.com/fmartinsba", target="_blank")
+        img(src="assets/images/github.png", alt="")
+        
+  .blurb
+    p !{about}
+            
+  .skill-lockup
+    - each val, index in skills_labels
+        .skill-unit
+          .skill-label= val
+          - var openDiv = 'div class="skill-icon skill-'+skills_values[index]+'"'
+            #{openDiv}
+              - for(i=0;i<10;i++)
+                  span

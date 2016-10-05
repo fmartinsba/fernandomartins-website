@@ -1,0 +1,106 @@
+.section-work
+  overflow-x: hidden
+
+.work-belt
+  width: 200%
+  position: relative
+  left: 0%
+  +transition(all 800ms ease)
+
+.thumb-wrap, .work-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  max-width: 960px
+  margin: 0px auto
+  box-shadow: 0 0 1em #888888
+
+  +clearfix
+
+  .thumb-unit
+    display: block
+    width: 50%
+    float: left
+    position: relative
+    padding-top: 30%
+    overflow: hidden
+    cursor: pointer
+    background-size: cover
+
+    .thumb-overlay
+      +position(absolute, 100%, 0px, null, 0px)
+      height: 100%
+      background: fade-out($accent, 0.1)
+      text-align: center
+      +transition(all, 0.2s, ease)
+
+      strong
+        display: block
+        padding: 40px 20px 20px 20px
+        color: white
+        font:
+          weight: 300
+          size: 24px
+        text-transform: uppercase
+        line-height: 1.2
+
+    &:hover .thumb-overlay
+      +position(absolute, 0%, 0px, null, 0px)
+
+
+.work-container
+  max-width: 600px
+  margin: 0px auto
+  position: relative
+  display: none
+
+  div[class*="project-"]
+    display: none
+
+  h4
+    color: $accent
+    font:
+      weight: 300
+      size: 24px
+    text-transform: uppercase
+    line-height: 1.2
+    margin: 0 0 20px
+
+    @media (max-width: 740px)
+      margin-left: 60px
+
+  img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+    margin-bottom: 20px
+    box-shadow: 0 0 1em #888888
+
+  p
+    text-align: center
+
+  .work-return
+    +size(40px,40px)
+    cursor: pointer
+    position: absolute
+    margin: -8px 0 0 -60px
+    background:
+      image: url(../images/back-btn.png)
+      size: 40px 40px
+    opacity: 0.5
+
+    @media (max-width: 740px)
+      margin: -8px 0 0 0px
+
+    &:hover
+      opacity: 1
+
+@media screen and (max-width: 651px)
+  .thumb-container
+    width: 100%
+
+    .thumb-unit
+      width: 100%
+      padding-top: 60%
